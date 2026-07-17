@@ -1,11 +1,11 @@
 # The Recruiting Agent
 
-Marketing site for **The Recruiting Agent** (recruitingagent.com), an Apollo[Claw] LLC product: a dedicated AI agent deployed for search firm owners, staffing agency principals, and corporate talent acquisition leaders.
+Marketing site for **The Recruiting Agent** (therecruitingagent.com), an Apollo[Claw] LLC product: a dedicated AI agent deployed for search firm owners, staffing agency principals, and corporate talent acquisition leaders.
 
 ## Structure
 
 - `index.html` — the complete single-page site (all ten sections, header, footer, SEO metadata, and JSON-LD). Static and self-contained; the only external requests are Google Fonts (Inter and IBM Plex Mono).
-- `apolloclaw/the-recruiting-agent.html` — product card page to deploy on apolloclaw.ai at `/the-recruiting-agent`, linking out to recruitingagent.com.
+- `apolloclaw/the-recruiting-agent.html` — product card page to deploy on apolloclaw.ai at `/the-recruiting-agent`, linking out to therecruitingagent.com.
 - `form.php` — optional server-side handler for a discovery-call request form, delivering via Mandrill. The live page uses a Calendly link for the primary call-to-action, so this is only needed if a contact form is added later. Requires the `MANDRILL_API_KEY` environment variable.
 
 ## Design system
@@ -14,7 +14,7 @@ Matches the Apollo[Claw] agent-site system (theceoagent.ai). Red `#D72B2B` accen
 
 ## Deploy
 
-Static hosting (xCloud push-to-deploy). Serve `index.html` at the root of recruitingagent.com.
+Static hosting (xCloud push-to-deploy). Serve `index.html` at the root of therecruitingagent.com.
 
 Before launch:
 - Confirm the Calendly URL in `index.html` (`https://calendly.com/therealdaveo/apolloai`).

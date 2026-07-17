@@ -47,9 +47,9 @@ $strip = function ($s) {
     return substr(preg_replace('/[\r\n]+/', ' ', $s), 0, 200);
 };
 
-$subject = '[recruitingagent.com] Discovery call request: ' . $strip($name) . ' / ' . $strip($company);
+$subject = '[therecruitingagent.com] Discovery call request: ' . $strip($name) . ' / ' . $strip($company);
 
-$plain = "Discovery call request from recruitingagent.com\n\n"
+$plain = "Discovery call request from therecruitingagent.com\n\n"
        . "Name:     " . $name    . "\n"
        . "Email:    " . $email   . "\n"
        . "Company:  " . $company . "\n"
@@ -71,7 +71,7 @@ $payload = json_encode([
         'text'       => $plain,
         'subject'    => $subject,
         'from_email' => 'david@apolloclaw.ai',
-        'from_name'  => 'The Recruiting Agent (recruitingagent.com)',
+        'from_name'  => 'The Recruiting Agent (therecruitingagent.com)',
         'to'         => [['email' => 'david@apolloclaw.ai', 'type' => 'to']],
         'headers'    => ['Reply-To' => $email],
     ],
