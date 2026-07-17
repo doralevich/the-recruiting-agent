@@ -52,6 +52,6 @@ Only if `form.php` is used later:
 
 ## Pre-launch content notes
 
-- Confirm the Calendly URL in `index.html` (`https://calendly.com/apolloclaw/30min`).
+- Confirm the Calendly URL in `index.html` (`https://calendly.com/therealdaveo/apolloai`).
 - Add `og.png` at the repository root for the social share image.
 - Swap the styled text wordmark for the final logo asset when available.

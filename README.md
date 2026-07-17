@@ -10,14 +10,14 @@ Marketing site for **The Recruiting Agent** (recruitingagent.com), an Apollo[Cla
 
 ## Design system
 
-Cream `#F2F0EB` background, near-black `#1A1A1A` text, deep teal `#0F766E` accent. Apollo red `#D72B2B` is reserved exclusively for Apollo[Claw] parent-brand references. Inter for headings and body, IBM Plex Mono for eyebrows, section labels, timestamps, and stats. White cards with a 3px teal left border. One dark security section (`#06090f`). No scroll animations or parallax.
+Matches the Apollo[Claw] agent-site system (theceoagent.ai). Red `#D72B2B` accent throughout. Dark navy hero and feature bands (`radial-gradient` from `#11182b` to `#03060e`) with a masked grid backdrop, cream content sections (`#F2F0EB` / `#FFFDF8`) with near-black text (`#0a0c19`) and red-accented cards, dark final CTA band and footer. Roboto Slab for the "The Recruiting [Agent]" wordmark (red brackets), Inter for headings and body, IBM Plex Mono for eyebrows, section labels, timestamps, and stats. No scroll animations or parallax.
 
 ## Deploy
 
 Static hosting (xCloud push-to-deploy). Serve `index.html` at the root of recruitingagent.com.
 
 Before launch:
-- Confirm the Calendly URL in `index.html` (`https://calendly.com/apolloclaw/30min`).
+- Confirm the Calendly URL in `index.html` (`https://calendly.com/therealdaveo/apolloai`).
 - Add `og.png` at the site root for the Open Graph share image.
 - Replace the styled text wordmark with the final logo asset when available.
 
