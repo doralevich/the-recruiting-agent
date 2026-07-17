@@ -55,3 +55,12 @@ Only if `form.php` is used later:
 - Confirm the Calendly URL in `index.html` (`https://calendly.com/therealdaveo/apolloai`).
 - og.png is in place at the repository root for the social share image.
 - Swap the styled text wordmark for the final logo asset when available.
+
+## SEO / AEO files (added)
+
+- `robots.txt`, `sitemap.xml`, `llms.txt` at the site root.
+- `404.html` custom error page. Point the server 404 handler at it: Apache `ErrorDocument 404 /404.html`, or set the custom 404 in the xCloud panel.
+- `/assets/site.css` is the shared stylesheet for all pages.
+- Content pages are directory-plus-index-file (for example `/solutions/staffing-agencies/index.html` serves at that clean URL). No rewrite rules needed.
+- Analytics: Google Analytics 4 `G-2QLLNZC2VM` on every page. Google Search Console verification tags in every `<head>`.
+- See `SEO-REPORT.md` for the full architecture, schema inventory, and remaining work.
