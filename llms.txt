@@ -1,0 +1,47 @@
+# The Recruiting Agent
+
+> The Recruiting Agent is a dedicated AI recruiting agent deployed inside a single recruiting firm. It sources candidates, drafts and sequences outreach, schedules interviews, prepares client updates, and keeps the applicant tracking system (ATS) current around the clock, so recruiters spend their time with candidates and clients. It is built and deployed by Apollo[Claw] AI Consulting.
+
+## What it is
+
+The Recruiting Agent is an AI agent for recruiting, staffing, and talent acquisition firms. It is a category of recruiting automation known as an agentic recruiting platform: one dedicated agent per firm that runs recruiting workflows end to end, rather than a chatbot that only answers questions. It is deployed inside the firm's own environment and configured around the firm's existing stack, including its ATS, email, and calendar.
+
+## Who it is for
+
+- Search firm owners and partners (retained and contingency executive search)
+- Staffing agency principals (high volume, speed to submit)
+- Corporate talent acquisition and in-house recruiting teams
+- Recruitment process outsourcing (RPO) providers
+- Vertical desks such as healthcare recruiting and tech recruiting
+
+## Core capabilities
+
+- Candidate sourcing and research: builds ranked longlists overnight, enriches profiles, maps target companies.
+- Outreach and follow-up: drafts personalized outreach in the firm's voice, sequences follow-ups, flags warm replies.
+- Interview scheduling and coordination: handles scheduling, confirmations, reschedules, and reminders across candidates, clients, and panels.
+- Client communications: prepares weekly search updates, pipeline summaries, and market feedback for every active engagement.
+- Market and compensation intelligence: researches comp ranges, talent supply, and competitor moves.
+- Pipeline and ATS hygiene: keeps records current, logs activity, updates stages, and produces clean reporting.
+
+## Governance and compliance
+
+One firm, one agent: no shared models, no pooled data, no cross-client exposure. Access is scoped to the systems and data the firm grants. Candidate records and client details stay inside the firm's environment and are never used to train outside models. Every action is logged and reviewable. Outreach, client communications, and offers move only with a human's approval, which supports EEOC and OFCCP compliance because people, not the agent, make selection decisions.
+
+## Pricing model
+
+Engagements are scoped per firm on a discovery call. There is no published one-size price. An engagement includes full deployment configured for the firm, a 90-day optimization period, month-to-month terms after deployment, and direct founder access. It is an engagement, not a self-serve subscription.
+
+## Key pages
+
+- Home: https://therecruitingagent.com/
+- What is an AI recruiting agent (pillar guide): https://therecruitingagent.com/ai-recruiting-agents/
+- Solutions by firm type: https://therecruitingagent.com/solutions/staffing-agencies/ , /solutions/executive-search/ , /solutions/corporate-talent-acquisition/ , /solutions/rpo/ , /solutions/healthcare-recruiting/ , /solutions/tech-recruiting/
+- Capabilities: https://therecruitingagent.com/capabilities/candidate-sourcing/ , /capabilities/candidate-outreach/ , /capabilities/resume-screening/ , /capabilities/interview-scheduling/ , /capabilities/pipeline-reporting/
+- Comparisons: https://therecruitingagent.com/compare/ai-recruiting-agent-vs-recruiting-chatbot/ , /compare/ai-recruiting-agent-vs-sourcer/ , /compare/build-vs-buy/
+- Glossary of terms: https://therecruitingagent.com/glossary/
+- About: https://therecruitingagent.com/about/
+- Contact: https://therecruitingagent.com/contact/
+
+## Company
+
+Apollo[Claw] AI Consulting, Roslyn Heights, New York. The Recruiting Agent is a division of Apollo[Claw]. Contact: david@apolloclaw.ai, 917.363.5487.
