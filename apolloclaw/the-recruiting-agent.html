@@ -24,22 +24,24 @@
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=Inter:wght@400;500;600;700&family=Roboto+Slab:wght@600;700&display=swap" rel="stylesheet">
 
   <style>
     :root {
-      --cream:#F2F0EB; --ink:#1A1A1A; --teal:#0F766E; --red:#D72B2B; --muted:#55605c;
+      /* accent is red, matching recruitingagent.com and theceoagent.ai */
+      --cream:#F2F0EB; --ink:#1A1A1A; --teal:#D72B2B; --red:#D72B2B; --muted:#55605c;
       --line:rgba(26,26,26,0.10);
       --card-shadow:0 1px 2px rgba(26,26,26,0.04), 0 8px 24px rgba(26,26,26,0.05);
       --sans:'Inter',ui-sans-serif,system-ui,-apple-system,sans-serif;
       --mono:'IBM Plex Mono',ui-monospace,SFMono-Regular,Menlo,monospace;
+      --slab:'Roboto Slab','IBM Plex Mono',ui-serif,Georgia,serif;
     }
     * { margin:0; padding:0; box-sizing:border-box; }
     body { background:var(--cream); color:var(--ink); font-family:var(--sans); -webkit-font-smoothing:antialiased; line-height:1.5; }
     a { color:inherit; text-decoration:none; }
     .wrap { max-width:840px; margin:0 auto; padding:0 28px; }
     .apollo { font-weight:600; white-space:nowrap; }
-    .apollo .br { color:var(--red); }
+    .br { color:var(--red); }
 
     .eyebrow { font-family:var(--mono); font-size:12.5px; font-weight:500; letter-spacing:0.18em; text-transform:uppercase; color:var(--teal); }
 
@@ -50,7 +52,7 @@
 
     .card-page { padding:70px 0 90px; }
     .mark { width:44px; height:44px; border-radius:11px; background:var(--teal); color:var(--cream); font-family:var(--mono); font-weight:600; font-size:24px; display:inline-flex; align-items:center; justify-content:center; margin-bottom:22px; }
-    h1 { font-weight:600; font-size:clamp(30px,5vw,46px); letter-spacing:-0.02em; line-height:1.1; margin-bottom:8px; }
+    h1 { font-family:var(--slab); font-weight:700; font-size:clamp(30px,5vw,46px); letter-spacing:-0.01em; line-height:1.1; margin-bottom:8px; }
     .tag { font-family:var(--mono); font-size:13px; color:var(--muted); letter-spacing:0.04em; margin-bottom:26px; }
     .lede { font-size:19px; color:var(--ink); max-width:64ch; line-height:1.6; }
 
@@ -60,8 +62,8 @@
     .hl h3 { font-size:16px; font-weight:600; letter-spacing:-0.01em; margin-bottom:6px; }
     .hl p { color:var(--muted); font-size:14px; line-height:1.55; }
 
-    .btn { display:inline-flex; align-items:center; gap:8px; font-size:15px; font-weight:600; padding:14px 24px; border-radius:10px; background:var(--teal); color:#fff; box-shadow:0 4px 14px rgba(15,118,110,0.22); transition:background .15s ease, transform .15s ease; }
-    .btn:hover { background:#0c5f58; transform:translateY(-1px); }
+    .btn { display:inline-flex; align-items:center; gap:8px; font-size:15px; font-weight:600; padding:14px 24px; border-radius:10px; background:var(--red); color:#fff; box-shadow:0 4px 14px rgba(215,43,43,0.22); transition:background .15s ease, transform .15s ease; }
+    .btn:hover { background:#b81f1f; transform:translateY(-1px); }
 
     footer { border-top:1px solid var(--line); padding:34px 0; font-size:13px; color:var(--muted); }
 
@@ -81,7 +83,7 @@
     <div class="wrap">
       <div class="mark">R</div>
       <div class="eyebrow">Apollo[Claw] Agent</div>
-      <h1 style="margin-top:12px">The Recruiting Agent</h1>
+      <h1 style="margin-top:12px">The Recruiting <span class="br">[</span>Agent<span class="br">]</span></h1>
       <div class="tag">recruitingagent.com</div>
 
       <p class="lede">A dedicated AI agent deployed inside recruiting, staffing, and talent acquisition firms. It sources candidates, researches profiles, drafts outreach, schedules interviews, prepares client updates, and keeps the ATS current around the clock, so recruiters spend their day where it counts: with candidates and clients.</p>
