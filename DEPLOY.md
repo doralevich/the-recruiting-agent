@@ -48,10 +48,10 @@ Only if `form.php` is used later:
 - [ ] "Book a Discovery Call" opens the Calendly link in a new tab
 - [ ] Mobile at 375px and desktop at 1280px both render cleanly
 - [ ] No console errors
-- [ ] `og.png` is present at the site root (add it before sharing links; used by Open Graph)
+- [x] `og.png` is present at the site root (used by Open Graph)
 
 ## Pre-launch content notes
 
 - Confirm the Calendly URL in `index.html` (`https://calendly.com/therealdaveo/apolloai`).
-- Add `og.png` at the repository root for the social share image.
+- og.png is in place at the repository root for the social share image.
 - Swap the styled text wordmark for the final logo asset when available.

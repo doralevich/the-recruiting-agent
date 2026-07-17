@@ -18,7 +18,7 @@ Static hosting (xCloud push-to-deploy). Serve `index.html` at the root of recrui
 
 Before launch:
 - Confirm the Calendly URL in `index.html` (`https://calendly.com/therealdaveo/apolloai`).
-- Add `og.png` at the site root for the Open Graph share image.
+- og.png is in place at the repo root for the Open Graph share image.
 - Logo asset is in place (images/logo.png); robot mascots in images/.
 
 ---
