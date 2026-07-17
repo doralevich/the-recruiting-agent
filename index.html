@@ -50,7 +50,7 @@
       --sans: 'Inter', ui-sans-serif, system-ui, -apple-system, sans-serif;
       --mono: 'IBM Plex Mono', ui-monospace, SFMono-Regular, Menlo, monospace;
       --slab: 'Roboto Slab', 'IBM Plex Mono', ui-serif, Georgia, serif;
-      --maxw: 1120px;
+      --maxw: 1280px;
     }
 
     * { margin: 0; padding: 0; box-sizing: border-box; }
@@ -120,9 +120,9 @@
       backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px);
       border-bottom: 1px solid rgba(10,14,26,0.06);
     }
-    .hbar { display: flex; align-items: center; justify-content: space-between; padding: 16px 0; gap: 20px; }
-    .nav { display: flex; gap: 26px; font-family: var(--mono); font-size: 13.5px; letter-spacing: 0.02em; color: var(--body); }
-    .nav a { color: var(--body); transition: color .15s ease; }
+    .hbar { display: flex; align-items: center; justify-content: space-between; padding-top: 16px; padding-bottom: 16px; gap: 20px; }
+    .nav { display: flex; gap: 24px; font-family: var(--sans); font-size: 15px; font-weight: 500; letter-spacing: -0.005em; color: var(--ink-soft); }
+    .nav a { color: var(--ink-soft); transition: color .15s ease; }
     .nav a:hover { color: var(--red); }
     .menu-btn { display: none; background: none; border: none; cursor: pointer; flex-direction: column; gap: 5px; padding: 6px; }
     .menu-btn span { width: 22px; height: 2px; background: var(--ink-soft); display: block; }
@@ -229,6 +229,33 @@
     details.q[open] summary .plus { transform: rotate(45deg); }
     details.q .ans { padding: 0 0 24px; color: var(--body); font-size: 16px; line-height: 1.62; max-width: 70ch; }
 
+    /* Contact */
+    .contact-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 44px; margin-top: 44px; align-items: start; }
+    .cform { display: grid; gap: 16px; }
+    .frow { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+    .field label { display: block; font-family: var(--mono); font-size: 11px; letter-spacing: 0.1em; text-transform: uppercase; color: var(--muted); margin-bottom: 7px; }
+    .field input, .field textarea {
+      width: 100%; font-family: var(--sans); font-size: 15px; color: var(--ink);
+      background: #fff; border: 1px solid var(--card-line); border-radius: 9px; padding: 12px 14px; outline: none;
+      transition: border-color .15s ease, box-shadow .15s ease;
+    }
+    .field textarea { resize: vertical; min-height: 118px; }
+    .field input:focus, .field textarea:focus { border-color: var(--red); box-shadow: 0 0 0 3px rgba(215,43,43,0.12); }
+    .hp { position: absolute; left: -9999px; width: 1px; height: 1px; overflow: hidden; }
+    .cform .btn-red { justify-self: start; margin-top: 4px; }
+    .cform .formmsg { font-size: 14px; color: var(--body); min-height: 18px; }
+    .cform .formmsg.ok { color: #15803d; }
+    .cform .formmsg.err { color: var(--red); }
+
+    .cmap { border: 1px solid var(--card-line); border-radius: 12px; overflow: hidden; box-shadow: 0 14px 34px -22px rgba(10,12,25,0.25); background: #fff; }
+    .cmap iframe { display: block; width: 100%; height: 260px; border: 0; }
+    .caddr { padding: 24px 24px 26px; }
+    .caddr .ct { font-family: var(--mono); font-size: 11px; letter-spacing: 0.1em; text-transform: uppercase; color: var(--red); margin-bottom: 12px; }
+    .caddr address { font-style: normal; color: var(--ink); font-size: 16px; line-height: 1.55; }
+    .caddr .rows { font-family: var(--mono); font-size: 14px; color: var(--body); line-height: 1.95; margin-top: 14px; }
+    .caddr .rows a:hover { color: var(--red); }
+    .caddr .division { margin-top: 16px; padding-top: 16px; border-top: 1px solid var(--card-line); font-size: 14px; color: var(--muted); }
+
     /* Final CTA (dark) */
     section.final { background: var(--dark-grad); color: #fff; text-align: center; padding: 104px 0; position: relative; overflow: hidden; border-top: 1px solid rgba(255,255,255,0.06); }
     section.final .wrap { position: relative; z-index: 1; }
@@ -249,6 +276,10 @@
     @media (max-width: 900px) {
       .g3, .g2 { grid-template-columns: 1fr; }
       .invest { grid-template-columns: 1fr; gap: 32px; }
+      .contact-grid { grid-template-columns: 1fr; gap: 28px; }
+    }
+    @media (max-width: 480px) {
+      .frow { grid-template-columns: 1fr; }
     }
     @media (max-width: 760px) {
       .wrap { padding: 0 22px; }
@@ -267,7 +298,7 @@
     }
     .mobile-menu { display: none; }
     .mobile-menu.open { display: flex; flex-direction: column; gap: 4px; padding: 8px 22px 22px; background: #fff; border-bottom: 1px solid rgba(10,14,26,0.08); }
-    .mobile-menu a { font-family: var(--mono); font-size: 15px; color: var(--body); padding: 10px 0; }
+    .mobile-menu a { font-family: var(--sans); font-size: 16px; font-weight: 500; color: var(--ink-soft); padding: 10px 0; }
   </style>
 </head>
 <body>
@@ -277,23 +308,25 @@
     <div class="wrap hbar">
       <a href="#top" class="logo-link" aria-label="The Recruiting Agent home"><img class="logo-img" src="images/logo.png" alt="The Recruiting [Agent]"></a>
       <nav class="nav">
-        <a href="#capabilities">capabilities</a>
-        <a href="#a-day">a day</a>
-        <a href="#deployment">deployment</a>
-        <a href="#who">who it's for</a>
-        <a href="#security">security</a>
-        <a href="#faq">faq</a>
+        <a href="#capabilities">Capabilities</a>
+        <a href="#a-day">A day</a>
+        <a href="#deployment">Deployment</a>
+        <a href="#who">Who it's for</a>
+        <a href="#security">Security</a>
+        <a href="#faq">FAQ</a>
+        <a href="#contact">Contact</a>
       </nav>
       <a class="btn btn-dark header-cta" href="https://calendly.com/therealdaveo/apolloai" target="_blank" rel="noopener">Book a Discovery Call</a>
       <button class="menu-btn" aria-label="Menu" onclick="document.getElementById('mm').classList.toggle('open')"><span></span><span></span><span></span></button>
     </div>
     <div class="mobile-menu" id="mm">
-      <a href="#capabilities" onclick="document.getElementById('mm').classList.remove('open')">capabilities</a>
-      <a href="#a-day" onclick="document.getElementById('mm').classList.remove('open')">a day</a>
-      <a href="#deployment" onclick="document.getElementById('mm').classList.remove('open')">deployment</a>
-      <a href="#who" onclick="document.getElementById('mm').classList.remove('open')">who it's for</a>
-      <a href="#security" onclick="document.getElementById('mm').classList.remove('open')">security</a>
-      <a href="#faq" onclick="document.getElementById('mm').classList.remove('open')">faq</a>
+      <a href="#capabilities" onclick="document.getElementById('mm').classList.remove('open')">Capabilities</a>
+      <a href="#a-day" onclick="document.getElementById('mm').classList.remove('open')">A day</a>
+      <a href="#deployment" onclick="document.getElementById('mm').classList.remove('open')">Deployment</a>
+      <a href="#who" onclick="document.getElementById('mm').classList.remove('open')">Who it's for</a>
+      <a href="#security" onclick="document.getElementById('mm').classList.remove('open')">Security</a>
+      <a href="#faq" onclick="document.getElementById('mm').classList.remove('open')">FAQ</a>
+      <a href="#contact" onclick="document.getElementById('mm').classList.remove('open')">Contact</a>
       <a href="https://calendly.com/therealdaveo/apolloai" target="_blank" rel="noopener">Book a Discovery Call</a>
     </div>
   </header>
@@ -481,6 +514,56 @@
       </div>
     </section>
 
+    <!-- ============ CONTACT ============ -->
+    <section class="sec cream" id="contact">
+      <div class="wrap">
+        <div class="eyebrow">Contact</div>
+        <h2>Start the conversation.</h2>
+        <p class="sub">Send a note or book a call. We reply from a real inbox, usually the same day.</p>
+        <div class="contact-grid">
+
+          <form class="cform" id="contactForm" novalidate>
+            <div class="frow">
+              <div class="field">
+                <label for="cf-name">Name</label>
+                <input id="cf-name" name="name" type="text" autocomplete="name" required>
+              </div>
+              <div class="field">
+                <label for="cf-email">Email</label>
+                <input id="cf-email" name="email" type="email" autocomplete="email" required>
+              </div>
+            </div>
+            <div class="field">
+              <label for="cf-company">Firm</label>
+              <input id="cf-company" name="company" type="text" autocomplete="organization" required>
+            </div>
+            <div class="field">
+              <label for="cf-msg">How can the agent help your desk?</label>
+              <textarea id="cf-msg" name="challenge"></textarea>
+            </div>
+            <div class="hp" aria-hidden="true"><label>Leave blank<input type="text" name="hp" tabindex="-1" autocomplete="off"></label></div>
+            <button class="btn btn-red" type="submit">Send message &rarr;</button>
+            <div class="formmsg" id="cf-msgout" role="status" aria-live="polite"></div>
+          </form>
+
+          <div class="cmap">
+            <iframe title="The Recruiting Agent location" loading="lazy" referrerpolicy="no-referrer-when-downgrade"
+              src="https://www.google.com/maps?q=69%20Roslyn%20Road,%20Roslyn%20Heights,%20NY%2011577&output=embed"></iframe>
+            <div class="caddr">
+              <div class="ct">Our Office</div>
+              <address>69 Roslyn Road<br>Roslyn Heights, NY 11577</address>
+              <div class="rows">
+                <a href="mailto:david@apolloclaw.ai">david@apolloclaw.ai</a><br>
+                <a href="tel:+19173635487">917.363.5487</a>
+              </div>
+              <div class="division">A Division of <span class="apollo">Apollo<span class="br">[</span>Claw<span class="br">]</span></span></div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
   </main>
 
   <!-- ============ FOOTER ============ -->
@@ -494,7 +577,7 @@
         <div class="fcontact">
           <a href="mailto:david@apolloclaw.ai">david@apolloclaw.ai</a><br>
           <a href="tel:+19173635487">917.363.5487</a><br>
-          <a href="https://apolloclaw.ai" target="_blank" rel="noopener">An <span class="apollo">Apollo<span class="br">[</span>Claw<span class="br">]</span></span> Product &rarr;</a>
+          <a href="https://apolloclaw.ai" target="_blank" rel="noopener">A Division of <span class="apollo">Apollo<span class="br">[</span>Claw<span class="br">]</span></span> &rarr;</a>
         </div>
       </div>
       <div class="fbottom">
@@ -520,6 +603,58 @@
     {"@type":"Question","name":"Can it match our firm's voice?","acceptedAnswer":{"@type":"Answer","text":"Yes. Outreach and client communications are trained on your tone, your templates, and your standards during design."}},
     {"@type":"Question","name":"What does it cost?","acceptedAnswer":{"@type":"Answer","text":"Engagements are scoped to your firm on a discovery call. There is no one-size pricing because there is no one-size desk."}}
   ]}
+  </script>
+
+  <script>
+  /* Contact form: posts JSON to form.php, shows inline status. */
+  (function () {
+    var form = document.getElementById('contactForm');
+    if (!form) return;
+    var out = document.getElementById('cf-msgout');
+    form.addEventListener('submit', function (e) {
+      e.preventDefault();
+      out.className = 'formmsg';
+      out.textContent = '';
+      var data = {
+        name: form.name.value.trim(),
+        email: form.email.value.trim(),
+        company: form.company.value.trim(),
+        challenge: form.challenge.value.trim(),
+        hp: form.hp.value
+      };
+      if (!data.name || !data.email || !data.company) {
+        out.className = 'formmsg err';
+        out.textContent = 'Please add your name, email, and firm.';
+        return;
+      }
+      var btn = form.querySelector('button[type="submit"]');
+      btn.disabled = true;
+      var original = btn.textContent;
+      btn.textContent = 'Sending...';
+      fetch('form.php', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(data)
+      }).then(function (r) {
+        return r.json().catch(function () { return {}; }).then(function (j) { return { ok: r.ok, j: j }; });
+      }).then(function (res) {
+        if (res.ok && res.j && res.j.ok) {
+          form.reset();
+          out.className = 'formmsg ok';
+          out.textContent = 'Thank you. Your message is on its way, we will be in touch shortly.';
+        } else {
+          out.className = 'formmsg err';
+          out.textContent = 'Something went wrong. Please email david@apolloclaw.ai directly.';
+        }
+      }).catch(function () {
+        out.className = 'formmsg err';
+        out.textContent = 'Something went wrong. Please email david@apolloclaw.ai directly.';
+      }).then(function () {
+        btn.disabled = false;
+        btn.textContent = original;
+      });
+    });
+  })();
   </script>
 
 </body>
